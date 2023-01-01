@@ -1,0 +1,83 @@
+@use '../abstracts/modules/generator';
+@use '../abstracts/modules/math';
+
+:root {
+	@include generator.all((
+			'colors' : (
+					'src' : ('neutral' : (hsl(0, 0%, 87%))),
+					'tints' : (100%),
+					'shades' : (30%, 60%, 100%),
+			),
+			'font-types' : (
+					'base' : 0.625rem,
+					'ratio' : 1.250,
+					'length' : 5,
+					'preserve' : 4,
+					'break-at' : 'min',
+					'breakpoints' : (
+							'48em' : (
+									'base' : 0.825rem,
+							),
+					),
+			),
+			'utilities' : (
+					'src' : (
+							generator.$font-weights,
+							generator.$line-heights,
+							generator.$measures,
+							generator.$text-aligns,
+							generator.$aligns,
+							generator.$justifys,
+							generator.$item-aligns,
+							generator.$item-justifys,
+							generator.$self-aligns,
+							generator.$self-justifys,
+							generator.$directions,
+					)
+			))
+	);
+	--ff-primary     : 'DM Sans', sans-serif;
+	--ff-body        : var(--ff-primary);
+	--ff-heading     : var(--ff-primary);
+
+	--body-min-space : #{$body-min-space};
+	--body-max-space : #{$body-max-space};
+	--body-space     : #{math.clamped($body-min-space, $body-max-space, $width-sm, $width-xl)};
+	--body-size      : min(100% - var(--body-space) * 2, 69.375rem);
+}
+
+:where([class*='align'], [class*='direction'], [class*='justify']) {
+	display : grid;
+}
+
+.sr-only {
+	position    : absolute;
+	overflow    : hidden;
+	margin      : -1px;
+	padding     : 0;
+	width       : 1px;
+	height      : 1px;
+	white-space : nowrap;
+	clip        : rect(0, 0, 0, 0);
+	border      : 0;
+}
+
+.text-uppercase {
+	text-transform : uppercase;
+}
+
+.image-darker {
+	position       : relative;
+	pointer-events : none;
+
+	&::before {
+		content  : '';
+		position : absolute;
+		inset    : 0;
+		background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.1));
+	}
+}
+
+.space-0 {
+	--space : 0; // temp
+}

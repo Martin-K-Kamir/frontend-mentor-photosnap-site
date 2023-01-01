@@ -1,0 +1,49 @@
+
+.btn {
+	--_fg                  : var(--bg, var(--clr-neutral-1, #FFFFFF));
+	--_bg                  : var(--fg, var(--clr-neutral-5, #000000));
+	--_transition-duration : 150ms;
+	--_transition-timing   : ease-out;
+
+	position               : relative;
+	cursor                 : pointer;
+	display                : inline-flex;
+	gap                    : 1ch;
+	align-items            : center;
+	justify-content        : center;
+	padding                : 1.15em 2.25em;
+	font-size              : var(--fs-1);
+	font-weight            : var(--fw-bold);
+	letter-spacing         : 0.1em;
+	line-height            : var(--line-height-1);
+	text-transform         : uppercase;
+	border                 : none;
+	color                  : var(--_fg);
+	background-color       : var(--_bg);
+	transition             : background-color var(--_transition-duration) var(--_transition-timing), border var(--_transition-duration) var(--_transition-timing);
+
+	&:has(.icon):not(:only-child) {
+		justify-content : space-between;
+	}
+
+	.icon {
+		inline-size : var(--_icon-size);
+		block-size  : var(--_icon-size);
+	}
+}
+
+:is([data-type='link'], [data-type='hamburger'], [data-type='icon']).btn {
+	--_fg   : var(--fg, var(--clr-neutral-1, #000000));
+	--_bg   : transparent;
+	padding : 0;
+}
+
+:is([data-type='icon'], [data-type='hamburger']).btn {
+	min-inline-size : 2rem;
+	aspect-ratio    : 1;
+}
+
+[data-type='link'].btn {
+	--_icon-size : 2.25em;
+}
+

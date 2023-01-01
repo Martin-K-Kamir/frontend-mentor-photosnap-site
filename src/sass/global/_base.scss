@@ -1,0 +1,36 @@
+
+body {
+	--fg             : var(--clr-neutral-5, #FFFFFF);
+	--bg             : var(--clr-neutral-1, #000000);
+
+	font-family      : var(--ff-body);
+	font-size        : var(--fs-2);
+	font-weight      : var(--fw-regular);
+	line-height      : var(--line-height-3);
+	color            : var(--fg);
+	background-color : var(--bg);
+}
+
+:where(a, button, input, select) {
+	--_size         : var(--outline-size, max(1px, 0.15em));
+	--_style        : var(--outline-style, solid);
+	--_fg           : var(--outline-fg, currentColor);
+
+	text-decoration : none;
+	color           : inherit;
+
+	&:focus-visible {
+		outline        : var(--_size) var(--_style) var(--_fg);
+		outline-offset : calc(var(--_size) * 1 + 1px);
+	}
+}
+
+.App {
+	display        : flex;
+	flex-direction : column;
+
+	main {
+		flex : 1;
+	}
+}
+

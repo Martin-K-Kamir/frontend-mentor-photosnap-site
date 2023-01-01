@@ -1,0 +1,26 @@
+:where(.flow) {
+	display : grid;
+}
+
+.flow {
+	--_space : var(--space, #{$space});
+	gap      : var(--_space);
+
+	&[data-inherit-space='true'],
+	& [data-inherit-space='true'] {
+		--space : inherit;
+	}
+
+	&[data-inherit-space='false'],
+	& [data-inherit-space='false'] {
+		--space : initial;
+	}
+}
+
+[data-flow-childs='divs'].flow {
+	:where(&) :where(div) {
+		display : grid;
+		--_space : var(--space, #{$space});
+		gap      : var(--_space);
+	}
+}

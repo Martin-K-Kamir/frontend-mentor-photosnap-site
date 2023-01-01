@@ -1,0 +1,12 @@
+
+.card-story {
+	max-block-size : 31rem;
+
+	&__content {
+		padding : $body-min-space;
+	}
+
+	picture {
+		max-block-size : inherit;
+	}
+}
