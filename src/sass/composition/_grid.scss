@@ -1,8 +1,17 @@
 .grid {
 	--_space              : var(--space, var(--space-1, #{$space}));
+	--_measure            : var(--measure, #{$measure});
 
 	inline-size           : 100%;
 	display               : grid;
 	gap                   : var(--_space);
-	grid-template-columns : repeat(auto-fit, minmax(min(var(--measure, #{$measure}), 100%), 1fr));
+	grid-template-columns : repeat(auto-fit, minmax(min(var(--_measure, #{$measure}), 100%), 1fr));
+}
+
+[data-content='evenly'].grid {
+	&:has( > :nth-child(odd) ) {
+		@media ($width-md <= width <= $width-lg)  {
+			--_measure: calc(var(--measure) * 1.4);
+		}
+	}
 }

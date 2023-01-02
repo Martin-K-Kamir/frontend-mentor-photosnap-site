@@ -12,8 +12,8 @@ export default function HomePage() {
             {data.split.map((item, index) => index < 3 && <Split key={`key${index}`} {...item}/>)}
         </section>
 
-        <section>
-            <ul className="[ grid ] [ space-0 measure-2 ]" role="list">
+        <section className="[ fg-neutral-1 bg-neutral-5 ]">
+            <ul className="[ grid ] [ space-0 measure-2 ]" data-content="evenly" role="list">
                 {data.stories.map((card, index) => index < 4 && <li key={`key${index}`}>
                     <CardStory {...card} btn={{...card.btn, content: "read story"}}/>
                 </li>)}
