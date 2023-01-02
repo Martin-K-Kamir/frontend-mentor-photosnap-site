@@ -8,10 +8,55 @@
 	grid-template-columns : repeat(auto-fit, minmax(min(var(--_measure, #{$measure}), 100%), 1fr));
 }
 
-[data-content='evenly'].grid {
-	&:has( > :nth-child(odd) ) {
-		@media ($width-md <= width <= $width-lg)  {
-			--_measure: calc(var(--measure) * 1.4);
-		}
+[data-template-columns='robust'].grid {
+	--_columns            : 1;
+	grid-template-columns : repeat(var(--_columns), 1fr);
+
+	@media (width > $width-sm) {
+		--_columns : var(--_min);
+	}
+
+	@media (width > $width-lg) {
+		--_columns : var(--_mid);
+	}
+
+	@media (width > $width-xxl) {
+		--_columns : var(--_max);
+	}
+
+	&:has( > :last-child:nth-child(2n)) {
+		--_min    : 1;
+		--_mid    : 2;
+		--_max    : 2;
+	}
+
+	&:has( > :last-child:nth-child(3n)) {
+		--_min    : 1;
+		--_mid    : 3;
+		--_max    : 3;
+	}
+
+	&:has( > :last-child:nth-child(4n)) {
+		--_min    : 2;
+		--_mid    : 4;
+		--_max    : 4;
+	}
+
+	&:has( > :last-child:nth-child(6n)) {
+		--_min    : 2;
+		--_mid    : 3;
+		--_max    : 6;
+	}
+
+	&:has( > :last-child:nth-child(8n)) {
+		--_min    : 2;
+		--_mid    : 4;
+		--_max    : 8;
+	}
+
+	&:has( > :last-child:nth-child(9n)) {
+		--_min    : 2;
+		--_mid    : 3;
+		--_max    : 9;
 	}
 }

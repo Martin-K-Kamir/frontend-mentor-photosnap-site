@@ -198,9 +198,11 @@ $line-heights    : (
 $measures        : (
 		'utils' : 'both',
 		'utils-property' : '--measure',
+		'breakpoints' : auto,
+		'break-at' : 'both',
 		'measure-1' : 13ch,
-		'measure-2' : 23ch,
-		'measure-3' : 28ch,
+		'measure-2' : 22ch,
+		'measure-3' : 33ch,
 		'measure-4' : 38ch,
 		'measure-5' : 48ch,
 		'measure-6' : 72ch,
@@ -235,7 +237,7 @@ $breakpoints     : (
 		'md': $width-md,
 		'lg': $width-lg,
 		'xl': $width-xl,
-	//'xxl': $width-xxl,
+		'xxl': $width-xxl,
 ) !default;
 
 //////////////////////

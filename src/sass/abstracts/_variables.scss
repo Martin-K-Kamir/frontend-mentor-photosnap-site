@@ -14,4 +14,4 @@ $width-sm       : map-get(generator.$breakpoints, 'sm');
 $width-md       : map-get(generator.$breakpoints, 'md');
 $width-lg       : map-get(generator.$breakpoints, 'lg');
 $width-xl       : map-get(generator.$breakpoints, 'xl');
-//$width-xxl      : map-get(generator.$breakpoints, 'xxl');
+$width-xxl      : map-get(generator.$breakpoints, 'xxl');

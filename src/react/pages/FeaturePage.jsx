@@ -9,7 +9,7 @@ export default function FeaturePage() {
 
         <section>
             <div className="wrapper">
-                <ul className="[ grid ] [ measure-3 ]" role="list">
+                <ul className="[ grid ] [  ]" data-template-columns="robust" style={{"--_max": 3}} role="list">
                     {data.features.map((card, index) => <li key={`key${index}`}>
                         <CardFeature title={card.title} iconName={card.iconName} desc={card.desc}/>
                     </li>)}

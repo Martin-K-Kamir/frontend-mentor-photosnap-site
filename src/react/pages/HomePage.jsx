@@ -13,7 +13,7 @@ export default function HomePage() {
         </section>
 
         <section className="[ fg-neutral-1 bg-neutral-5 ]">
-            <ul className="[ grid ] [ space-0 measure-2 ]" data-content="evenly" role="list">
+            <ul className="[ grid ] [ space-0  ]" data-template-columns="robust" role="list">
                 {data.stories.map((card, index) => index < 4 && <li key={`key${index}`}>
                     <CardStory {...card} btn={{...card.btn, content: "read story"}}/>
                 </li>)}
@@ -22,7 +22,7 @@ export default function HomePage() {
 
         <section>
             <div className="wrapper">
-                <ul className="[ switcher ] [ measure-6 ]" role="list">
+                <ul className="[ grid ] [  ]" data-template-columns="robust" role="list">
                     {data.features.map((card, index) => index < 3 && <li key={`key${index}`}>
                         <CardFeature {...card}/>
                     </li>)}

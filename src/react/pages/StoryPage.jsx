@@ -8,7 +8,7 @@ export default function StoryPage() {
             {data.hero.map((hero, index) => hero.page === "stories" && <Hero key={`key${index}`} {...hero}/>)}
 
             <section className="[ fg-neutral-1 bg-neutral-5 ]">
-                <ul className="[ grid ] [ space-0 measure-2 ]" role="list">
+                <ul className="[ grid ] [ space-0 ]" data-template-columns="robust" role="list">
                     {data.stories.map((card, index) => <li key={`key${index}`}>
                         <CardStory {...card} btn={{...card.btn, content: "read story"}}/>
                     </li>)}
