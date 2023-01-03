@@ -1,6 +1,11 @@
 
 .cover {
-	@media (width < $width-md) {
+
+	@media (width <= $width-md) {
 		display : block !important;
+	}
+
+	&__content {
+		padding    : $body-min-space;
 	}
 }

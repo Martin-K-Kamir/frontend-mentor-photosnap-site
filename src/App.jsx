@@ -11,7 +11,7 @@ import ComingSoonPage from "./react/pages/ComingSoonPage";
 
 export default function App() {
 
-    return (<div className="App">
+    return (<>
         <Router>
             <ScrollToTop>
                 <HeaderSite/>
@@ -25,5 +25,5 @@ export default function App() {
                 <FooterSite/>
             </ScrollToTop>
         </Router>
-    </div>);
+    </>);
 }

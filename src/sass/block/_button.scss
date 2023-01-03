@@ -39,6 +39,7 @@
 }
 
 :is([data-type='icon'], [data-type='hamburger']).btn {
+	--_icon-size    : 2.25em;
 	min-inline-size : 2rem;
 	aspect-ratio    : 1;
 }

@@ -11,6 +11,10 @@ body {
 	background-color : var(--bg);
 }
 
+body:has(nav[data-open='true']) {
+	overflow : hidden;
+}
+
 :where(a, button, input, select) {
 	--_size         : var(--outline-size, max(1px, 0.15em));
 	--_style        : var(--outline-style, solid);
@@ -25,19 +29,10 @@ body {
 	}
 }
 
-.App {
-	display        : flex;
-	flex-direction : column;
-
-	main {
-		flex : 1;
-	}
-}
-
 picture img {
-	aspect-ratio: inherit;
-	block-size  : inherit;
-	inline-size : inherit;
-	object-fit  : inherit;
+	aspect-ratio : inherit;
+	block-size   : inherit;
+	inline-size  : inherit;
+	object-fit   : inherit;
 }
 

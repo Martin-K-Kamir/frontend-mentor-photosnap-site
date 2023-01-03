@@ -5,9 +5,5 @@
 }
 
 [data-max-wrapper="true"].wrapper {
-	inline-size : auto;
-
-	@media (width > 128em) {
-		max-inline-size: 128rem;
-	}
+	inline-size: min(100%, 128rem);
 }

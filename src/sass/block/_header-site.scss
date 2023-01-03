@@ -1,0 +1,64 @@
+
+.header-site {
+	position          : sticky;
+	inset-block-start : 0;
+	z-index           : 9999;
+
+	&__container {
+		background-color : inherit;
+		padding-block    : 1rem; // temp
+	}
+
+	nav {
+		@media (width <= $width-md) {
+			position                   : absolute;
+			inset                      : 0;
+			z-index                    : -1;
+			transition-property        : opacity, translate, visibility;
+			transition-duration        : 200ms;
+			transition-timing-function : ease-out;
+		}
+	}
+
+	nav ul {
+		@media (width <= $width-md) {
+			translate : 0 -1px;
+		}
+	}
+
+	nav[data-open='true']::after {
+		@media (width <= $width-md) {
+			content          : '';
+			position         : fixed;
+			z-index          : -1;
+			inset            : 0;
+			block-size       : 100vh;
+			background-color : #000000;
+			opacity          : 0.8;
+		}
+	}
+
+	nav[data-open='false'] {
+		@media (width <= $width-md) {
+			visibility : hidden;
+			opacity    : 0;
+			translate  : 0 0;
+		}
+	}
+
+	nav[data-open='true'] {
+		@media (width <= $width-md) {
+			visibility : visible;
+			opacity    : 1;
+			translate  : 0 100%;
+		}
+	}
+
+	.btn[data-type='hamburger'] {
+		translate : 25% 0;
+
+		@media (width >= $width-md) {
+			display : none;
+		}
+	}
+}
