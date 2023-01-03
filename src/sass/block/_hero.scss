@@ -1,0 +1,19 @@
+.hero {
+	@media (width > $width-md) {
+		block-size : 40.625rem;
+	}
+
+	.split {
+		@media (width > $width-md) {
+			block-size : 40.625rem;
+		}
+	}
+
+	picture {
+		object-fit : cover;
+
+		@media (width < $width-md) {
+			aspect-ratio : 1;
+		}
+	}
+}

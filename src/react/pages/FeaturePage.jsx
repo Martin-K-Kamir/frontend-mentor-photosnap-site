@@ -5,11 +5,11 @@ import Cta from "../components/Cta.jsx";
 
 export default function FeaturePage() {
     return (<main>
-        {data.hero.map((hero, index) => hero.page === "features" && <Hero key={`key${index}`} {...hero}/>)}
+        <Hero data={data} page="features"/>
 
         <section>
             <div className="wrapper">
-                <ul className="[ grid ] [  ]" data-template-columns="robust" style={{"--_max": 3}} role="list">
+                <ul className="grid" data-columns="robust" role="list">
                     {data.features.map((card, index) => <li key={`key${index}`}>
                         <CardFeature title={card.title} iconName={card.iconName} desc={card.desc}/>
                     </li>)}

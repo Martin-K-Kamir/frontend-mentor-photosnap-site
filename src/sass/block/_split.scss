@@ -1,0 +1,26 @@
+
+.split {
+	@media (width > $width-md) {
+		block-size : 37.5rem;
+	}
+
+	&__content {
+		padding    : $body-min-space;
+		block-size : inherit;
+
+		@media (width > $width-md) {
+			max-inline-size : 37.5rem;
+			min-inline-size : 30rem;
+		}
+	}
+
+	picture {
+		block-size  : inherit;
+		inline-size : 100%;
+		object-fit  : cover;
+
+		@media (width <= $width-md) {
+			order : -1;
+		}
+	}
+}

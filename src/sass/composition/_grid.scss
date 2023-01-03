@@ -1,14 +1,12 @@
 .grid {
-	--_space              : var(--space, var(--space-1, #{$space}));
 	--_measure            : var(--measure, #{$measure});
 
 	inline-size           : 100%;
 	display               : grid;
-	gap                   : var(--_space);
 	grid-template-columns : repeat(auto-fit, minmax(min(var(--_measure, #{$measure}), 100%), 1fr));
 }
 
-[data-template-columns='robust'].grid {
+[data-columns='robust'].grid {
 	--_columns            : 1;
 	grid-template-columns : repeat(var(--_columns), 1fr);
 
@@ -20,7 +18,7 @@
 		--_columns : var(--_mid);
 	}
 
-	@media (width > $width-xxl) {
+	@media (width > 128em) {
 		--_columns : var(--_max);
 	}
 
@@ -42,21 +40,9 @@
 		--_max    : 4;
 	}
 
-	&:has( > :last-child:nth-child(6n)) {
-		--_min    : 2;
-		--_mid    : 3;
-		--_max    : 6;
-	}
-
 	&:has( > :last-child:nth-child(8n)) {
 		--_min    : 2;
 		--_mid    : 4;
 		--_max    : 8;
-	}
-
-	&:has( > :last-child:nth-child(9n)) {
-		--_min    : 2;
-		--_mid    : 3;
-		--_max    : 9;
 	}
 }

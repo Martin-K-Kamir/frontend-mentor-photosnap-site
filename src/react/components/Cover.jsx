@@ -12,15 +12,15 @@ export default function Cover(props) {
     const Title = getTitle();
 
     return (
-        <div className="[ stacked ] [ fg-neutral-1 bg-neutral-5 ]">
-            <div className="stack">
+        <div className="[ cover ] [ stacked ] [ fg-neutral-1 bg-neutral-5 ]">
+            <Image utils="image-darker" {...props.image}/>
+            <div className="[ cover__content ] [ stack ]">
                 {props.subtitle && <p className="title-1">{props.subtitle}</p>}
                 <Title className="title-5">{props.title}</Title>
                 {props.author && props.datetime && <p className="fs-1">{props.datetime && <time dateTime={props.datetime}>{props.datetime}</time> } {props.author && "by " + props.author}</p>}
-                <p>{props.desc}</p>
-                {props.btn && <Button {...props.btn}>{props.btn.content}</Button>}
+                <p className={`[ ${props.hero ? "fg-neutral-3" : "fg-neutral-4"} ]`}>{props.desc}</p>
+                {props.btn && <Button type="link" {...props.btn}>{props.btn.content}</Button>}
             </div>
-            <Image {...props.image}/>
         </div>
     );
 }

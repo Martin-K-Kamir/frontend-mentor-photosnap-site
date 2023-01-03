@@ -3,7 +3,7 @@ import Button from "./Button";
 
 export default function Cta() {
     return (
-        <div className="[ stacked ] [ fg-neutral-1 bg-neutral-5 ]">
+        <div className="[ stacked ] [ fg-neutral-1 bg-neutral-5 ]" data-extrinsic-sizing='true'>
             <Image dir="shared" name="cta" widths={["1440", "768", "375"]}/>
             <div className="[ flow wrapper ] [ items-align-center direction-row//md ]">
                 <h2 className="title-5">We’re in beta. Get your invite today!</h2>

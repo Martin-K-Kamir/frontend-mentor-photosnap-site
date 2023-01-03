@@ -1,0 +1,6 @@
+
+.cover {
+	@media (width < $width-md) {
+		display : block !important;
+	}
+}

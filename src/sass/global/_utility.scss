@@ -43,7 +43,8 @@
 	--body-min-space : #{$body-min-space};
 	--body-max-space : #{$body-max-space};
 	--body-space     : #{math.clamped($body-min-space, $body-max-space, $width-sm, $width-xl)};
-	--body-size      : min(100% - var(--body-space) * 2, 69.375rem);
+	--body-max-size  : 69.375rem;
+	--body-size      : min(100% - var(--body-space) * 2, var(--body-max-size));
 }
 
 :where([class*='align'], [class*='direction'], [class*='justify']) {
@@ -71,10 +72,10 @@
 	pointer-events : none;
 
 	&::before {
-		content  : '';
-		position : absolute;
-		inset    : 0;
-		background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 20%, rgba(0, 0, 0, 0.15));
+		content          : '';
+		position         : absolute;
+		inset            : 0;
+		background-image : linear-gradient(0deg, rgba(0, 0, 0, 0.6) 25%, rgba(0, 0, 0, 0));
 	}
 }
 

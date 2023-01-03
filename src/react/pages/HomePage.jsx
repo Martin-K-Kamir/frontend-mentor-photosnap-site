@@ -6,23 +6,27 @@ import Hero from "../components/Hero.jsx";
 
 export default function HomePage() {
     return (<main>
-        {data.hero.map((hero, index) => hero.page === "home" && <Hero key={`key${index}`} {...hero}/>)}
+        <Hero data={data} page="home"/>
 
         <section>
-            {data.split.map((item, index) => index < 3 && <Split key={`key${index}`} {...item}/>)}
+            <div className="wrapper zpattern" data-zpattern-first="media" data-max-wrapper="true">
+                {data.split.map((item, index) => index < 3 && <Split key={`key${index}`} {...item}/>)}
+            </div>
         </section>
 
-        <section className="[ fg-neutral-1 bg-neutral-5 ]">
-            <ul className="[ grid ] [ space-0  ]" data-template-columns="robust" role="list">
-                {data.stories.map((card, index) => index < 4 && <li key={`key${index}`}>
-                    <CardStory {...card} btn={{...card.btn, content: "read story"}}/>
-                </li>)}
-            </ul>
+        <section className="[ fg-neutral-1 ]">
+            <div className="wrapper" data-max-wrapper="true">
+                <ul className="grid" data-columns="robust" role="list">
+                    {data.stories.map((card, index) => index < 4 && <li key={`key${index}`}>
+                        <CardStory {...card} btn={{...card.btn, content: "read story"}}/>
+                    </li>)}
+                </ul>
+            </div>
         </section>
 
         <section>
             <div className="wrapper">
-                <ul className="[ grid ] [  ]" data-template-columns="robust" role="list">
+                <ul className="grid flow" data-columns="robust" role="list">
                     {data.features.map((card, index) => index < 3 && <li key={`key${index}`}>
                         <CardFeature {...card}/>
                     </li>)}

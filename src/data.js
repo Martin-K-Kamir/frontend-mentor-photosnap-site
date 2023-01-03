@@ -319,7 +319,7 @@ export default {
             },
             image: {
                 dir: "stories",
-                widths: ["830", "375"],
+                widths: ["1440", "375"],
                 deviceSizes: ["desktop", "mobile"]
             },
         },

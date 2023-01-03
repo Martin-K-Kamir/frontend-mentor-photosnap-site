@@ -1,54 +1,4 @@
 
-.zpattern {
-	--scale  : 4;
-	--_space : var(--space, calc(#{$space} * var(--scale)));
-
-	display  : grid;
-	gap      : var(--_space);
-
-	&__block,
-	& > div {
-		--_space-portion   : 2.25;
-		--_space-inherited : calc(var(--space) / var(--_space-portion));
-		--_space           : var(--_space-inherited, calc(#{$space} * var(--_scale, var(--scale))));
-
-		display            : grid;
-		align-items        : center;
-		gap                : var(--_space);
-
-		@media (width <= $width-lg) {
-			--_scale : calc(var(--scale) / 2);
-		}
-
-		@media (width > $width-lg) {
-			--_space-portion  : 1.5;
-			grid-auto-columns : 1fr;
-			grid-auto-flow    : column;
-		}
-	}
-
-	&__media,
-	& > div > :where(picture, img, svg, video, iframe) {
-		inline-size : 100%;
-		object-fit  : cover;
-	}
-
-	&__block:nth-child(odd) &__content,
-	& > div:nth-child(odd) > div {
-		@media (width > $width-lg) {
-			justify-self : end;
-		}
-	}
-
-	&__block:nth-child(even) &__content,
-	& > div:nth-child(even) > div {
-
-		@media (width > $width-lg) {
-			justify-self : start;
-		}
-	}
-}
-
 [data-zpattern-first='media'].zpattern {
 
 	&__block &__content,
@@ -58,7 +8,7 @@
 
 	&__block:nth-child(even) &__content,
 	& > div:nth-child(even) > div {
-		@media (width > $width-lg) {
+		@media (width > $width-md) {
 			order : 0;
 		}
 	}
@@ -69,17 +19,15 @@
 	& > div > div {
 		order : 2;
 
-		@media (width > $width-lg) {
-			order        : 0;
-			justify-self : start;
+		@media (width > $width-md) {
+			order : 0;
 		}
 	}
 
 	&__block:nth-child(even) &__content,
 	& > div:nth-child(even) > div {
-		@media (width > $width-lg) {
-			order        : 2;
-			justify-self : end;
+		@media (width > $width-md) {
+			order : 2;
 		}
 	}
 }

@@ -3,3 +3,11 @@
 	inline-size   : var(--body-size);
 	margin-inline : auto;
 }
+
+[data-max-wrapper="true"].wrapper {
+	inline-size : auto;
+
+	@media (width > 128em) {
+		max-inline-size: 128rem;
+	}
+}

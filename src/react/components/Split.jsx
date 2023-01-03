@@ -13,10 +13,10 @@ export default function Split(props) {
     const Title = getTitle();
 
     return (
-        <div>
-            <div className="stack">
-                <Title className="title-5">{props.title}</Title>
-                <p className={props.hero ? "fg-neutral-3" : "fg-neutral-4"}>{props.desc}</p>
+        <div className="[ split ] [ direction-row//md ]">
+            <div className="[ split__content ] [ stack ] [ self-justify-center//md align-center//md justify-center//md ]">
+                <Title className="[ title-5 ] [ ]">{props.title}</Title>
+                <p className={`[ ${props.hero ? "fg-neutral-3" : "fg-neutral-4"} ]`}>{props.desc}</p>
                 {props.btn && <Button type="link" {...props.btn}>{props.btn.content}</Button>}
             </div>
             <Image {...props.image}/>

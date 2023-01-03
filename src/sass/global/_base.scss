@@ -34,3 +34,10 @@ body {
 	}
 }
 
+picture img {
+	aspect-ratio: inherit;
+	block-size  : inherit;
+	inline-size : inherit;
+	object-fit  : inherit;
+}
+

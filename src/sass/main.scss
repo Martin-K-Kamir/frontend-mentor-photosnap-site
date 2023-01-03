@@ -7,9 +7,12 @@
 @import 'block/button';
 @import 'block/icon';
 @import 'block/card';
+@import 'block/split';
+@import 'block/cover';
+@import 'block/hero';
 
 @import 'composition/cluster';
-@import 'composition/even-columns';
+@import 'composition/columns';
 @import 'composition/flow';
 @import 'composition/wrapper';
 @import 'composition/grid';

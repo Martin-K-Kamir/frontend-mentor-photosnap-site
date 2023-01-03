@@ -8,7 +8,8 @@ import Toggle from "../components/Toggle";
 export default function PricePage() {
     return (
         <main>
-            {data.hero.map((hero, index) => hero.page === "pricing" && <Hero key={`key${index}`} {...hero}/>)}
+            <Hero data={data} page="pricing"/>
+
             <section>
                 <div className="wrapper">
                     <h2 className="sr-only">Subscription plans</h2>
@@ -16,6 +17,7 @@ export default function PricePage() {
                     {data.plans.map((plan, index) => <CardPlan key={`key${index}`} {...plan} btn={{...plan.btn, content: "Pick plan"}}/>)}
                 </div>
             </section>
+
             <section>
                 <div className="wrapper">
                     <h2 className="title-5">Compare</h2>
