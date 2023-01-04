@@ -4,8 +4,15 @@ import Cta from "../components/Cta.jsx";
 import TablePlan from "../components/TablePlan";
 import CardPlan from "../components/CardPlan";
 import Toggle from "../components/Toggle";
+import {useState} from "react";
 
 export default function PricePage() {
+    const [paymentFrequency, setPaymentFrequency] = useState(0);
+
+    function handleTogglePaymentFrequency() {
+        setPaymentFrequency(paymentFrequency === 0 ? 1 : 0);
+    }
+
     return (
         <main>
             <Hero data={data} page="pricing"/>
@@ -13,8 +20,10 @@ export default function PricePage() {
             <section>
                 <div className="wrapper">
                     <h2 className="sr-only">Subscription plans</h2>
-                    <Toggle/>
-                    {data.plans.map((plan, index) => <CardPlan key={`key${index}`} {...plan} btn={{...plan.btn, content: "Pick plan"}}/>)}
+                    <Toggle onClick={handleTogglePaymentFrequency} leadLabel="Monthly" rearLabel="Yearly" utils="fg-neutral-5 bg-neutral-2"/>
+                    <div className="[ flow ] [ direction-row//lg ]">
+                        {data.plans.map((plan, index) => <CardPlan paymentFrequencySelected={paymentFrequency} key={`key${index}`} {...plan} btn={{...plan.btn, content: "Pick plan"}}/>)}
+                    </div>
                 </div>
             </section>
 

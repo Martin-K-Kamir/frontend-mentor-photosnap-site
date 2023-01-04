@@ -11,10 +11,10 @@ export default function FooterSite() {
             </Link>
             <nav id="navigation-footer" className="navigation-footer">
                 <ul aria-label="navigation footer" role="list" className="[ flow ] [ direction-row//md direction-column//lg ]">
-                    <li><NavLink exact="true" to="/">home</NavLink></li>
-                    <li><NavLink exact="true" to="/stories">stories</NavLink></li>
-                    <li><NavLink exact="true" to="/features">features</NavLink></li>
-                    <li><NavLink exact="true" to="/pricing">pricing</NavLink></li>
+                    <li className="[ title-1 ] [ text-uppercase ]"><NavLink exact="true" to="/">home</NavLink></li>
+                    <li className="[ title-1 ] [ text-uppercase ]"><NavLink exact="true" to="/stories">stories</NavLink></li>
+                    <li className="[ title-1 ] [ text-uppercase ]"><NavLink exact="true" to="/features">features</NavLink></li>
+                    <li className="[ title-1 ] [ text-uppercase ]"><NavLink exact="true" to="/pricing">pricing</NavLink></li>
                 </ul>
             </nav>
             <nav id="navigation-socials" className="navigation-socials">

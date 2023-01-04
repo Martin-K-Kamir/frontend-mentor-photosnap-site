@@ -394,15 +394,18 @@ export default {
         {
             title: "Basic",
             desc: "Includes basic usage of our platform. Recommended for new and aspiring photographers.",
-            price: 190,
+            price: [19, 190],
+            paymentFrequency : ["month", "year"],
             btn: {
                 to: "/coming-soon",
             }
         },
         {
+            highlight: true,
             title: "Pro",
             desc: "More advanced features available. Recommended for photography veterans and professionals.",
-            price: 390,
+            price: [39, 390],
+            paymentFrequency : ["month", "year"],
             btn: {
                 to: "/coming-soon",
             }
@@ -410,7 +413,8 @@ export default {
         {
             title: "Business",
             desc: "Additional features available such as more detailed metrics. Recommended for business owners.",
-            price: 999,
+            price: [99, 999],
+            paymentFrequency : ["month", "year"],
             btn: {
                 to: "/coming-soon",
             }
