@@ -50,7 +50,8 @@
 
 	nav[data-open='false']::after {
 		@media (width <= $width-md) {
-			opacity : 0;
+			pointer-events : none;
+			opacity        : 0;
 		}
 	}
 
