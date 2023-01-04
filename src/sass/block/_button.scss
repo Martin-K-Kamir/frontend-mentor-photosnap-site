@@ -14,15 +14,15 @@
 	padding                : 1.15em 2.25em;
 	font-size              : var(--fs-1);
 	font-weight            : var(--fw-bold);
-	letter-spacing         : 0.1em;
 	line-height            : var(--line-height-1);
+	letter-spacing         : 0.1em;
 	text-transform         : uppercase;
 	border                 : none;
 	color                  : var(--_fg);
 	background-color       : var(--_bg);
 	transition             : background-color var(--_transition-duration) var(--_transition-timing), border var(--_transition-duration) var(--_transition-timing);
 
-	&:has(.icon):not(:only-child) {
+	&:where(&:has(.icon):not(:only-child)) {
 		justify-content : space-between;
 	}
 
@@ -39,7 +39,6 @@
 }
 
 :is([data-type='icon'], [data-type='hamburger']).btn {
-	--_icon-size    : 2.25em;
 	min-inline-size : 2rem;
 	aspect-ratio    : 1;
 }
@@ -48,3 +47,6 @@
 	--_icon-size : 2.25em;
 }
 
+[data-type='hamburger'].btn {
+	--_icon-size : 2.25em;
+}

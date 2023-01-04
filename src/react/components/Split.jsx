@@ -14,7 +14,7 @@ export default function Split(props) {
 
     return (
         <div className="[ split ] [ direction-row//md ]">
-            <div className="[ split__content ] [ stack ] [ self-justify-center//md align-center//md justify-center//md ]">
+            <div className="[ split__content ] [ stack ] [ justify-center//md justify-self-center//md align-content-center//md  ]">
                 <Title className="[ title-5 ] [ ]">{props.title}</Title>
                 <p className={`[ ${props.hero ? "fg-neutral-3" : "fg-neutral-4"} ]`}>{props.desc}</p>
                 {props.btn && <Button type="link" {...props.btn}>{props.btn.content}</Button>}

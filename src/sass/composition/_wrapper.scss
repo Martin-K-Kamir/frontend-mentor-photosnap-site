@@ -5,5 +5,5 @@
 }
 
 [data-max-wrapper="true"].wrapper {
-	inline-size: min(100%, 128rem);
+	inline-size: var(--body-max-size);
 }

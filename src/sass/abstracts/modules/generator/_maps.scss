@@ -8,76 +8,76 @@ $font-weights    : (
 		'fw-bold' : 700,
 ) !default;
 
-$text-aligns     : (
+$text-align     : (
 		'utils' : 'class',
 		'utils-property' : 'text-align',
 		'breakpoints' : auto,
-		'break-at' : 'min',
+		'break-at' : 'both',
+		'text-left' : 'left',
 		'text-center' : 'center',
 		'text-start' : 'start',
 ) !default;
 
-$aligns          : (
+$align-content   : (
 		'utils' : 'class',
 		'utils-property' : 'align-content',
 		'breakpoints' : auto,
 		'break-at' : 'min',
-		'align-center' : 'center',
-		'align-start' : 'start',
-		'align-end' : 'end',
-		'align-between' : 'space-between',
+		'align-content-center' : 'center',
+		'align-content-start' : 'start',
+		'align-content-end' : 'end',
+		'align-content-between' : 'space-between',
 ) !default;
 
-$justifys        : (
+$justify-content : (
 		'utils' : 'class',
 		'utils-property' : 'justify-content',
 		'breakpoints' : auto,
 		'break-at' : 'min',
-		'justify-center' : 'center',
-		'justify-start' : 'start',
-		'justify-end' : 'start',
-		'justify-between' : 'space-between',
+		'justify-content-center' : 'center',
+		'justify-content-start' : 'start',
+		'justify-content-end' : 'start',
+		'justify-content-between' : 'space-between',
 ) !default;
 
-$item-aligns     : (
+$align-items     : (
 		'utils' : 'class',
 		'utils-property' : 'align-items',
 		'breakpoints' : auto,
 		'break-at' : 'min',
-		'items-align-center' : 'center',
-		'items-align-start' : 'start',
-		'items-align-end' : 'end',
+		'align-items-center' : 'center',
+		'align-items-start' : 'start',
+		'align-items-end' : 'end',
 ) !default;
 
-$item-justifys   : (
+$justify-items   : (
 		'utils' : 'class',
 		'utils-property' : 'justify-items',
 		'breakpoints' : auto,
 		'break-at' : 'min',
-		'items-justify-center' : 'center',
-		'items-justify-start' : 'start',
-		'items-justify-end' : 'end',
+		'justify-items-center' : 'center',
+		'justify-items-start' : 'start',
+		'justify-items-end' : 'end',
 ) !default;
 
-$self-aligns     : (
+$align-self     : (
 		'utils' : 'class',
 		'utils-property' : 'align-self',
 		'breakpoints' : auto,
 		'break-at' : 'min',
-		'self-align-center' : 'center',
-		'self-align-start' : 'start',
-		'self-align-end' : 'end',
+		'align-self-center' : 'center',
+		'align-self-start' : 'start',
+		'align-self-end' : 'end',
 ) !default;
 
-$self-justifys   : (
+$justify-self   : (
 		'utils' : 'class',
 		'utils-property' : 'justify-self',
 		'breakpoints' : auto,
 		'break-at' : 'min',
-		'self-justify-center' : 'center',
-		'self-justify-start' : 'start',
-		'self-justify-end' : 'end',
-		'self-justify-stretch' : 'stretch',
+		'justify-self-center' : 'center',
+		'justify-self-start' : 'start',
+		'justify-self-end' : 'end',
 ) !default;
 
 

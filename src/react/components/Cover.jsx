@@ -14,7 +14,7 @@ export default function Cover(props) {
     return (
         <div className="[ cover ] [ stacked ] [ fg-neutral-1 bg-neutral-5 ]" data-extrinsic-sizing='true'>
             <Image utils="image-darker" {...props.image}/>
-            <div className="[ cover__content ] [ stack wrapper ] [ align-center//md ]" data-max-wrapper="true">
+            <div className="[ cover__content ] [ stack wrapper ] [ align-content-center//md ]" data-max-wrapper="true">
                 {props.subtitle && <p className="[ title-1 ] [ text-uppercase ]">{props.subtitle}</p>}
                 <Title className="title-5">{props.title}</Title>
                 {props.author && props.datetime && <p className="fs-1">{props.datetime && <time dateTime={props.datetime}>{props.datetime}</time> } {props.author && "by " + props.author}</p>}

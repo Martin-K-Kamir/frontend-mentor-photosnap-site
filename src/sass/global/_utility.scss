@@ -25,27 +25,25 @@
 							generator.$font-weights,
 							generator.$line-heights,
 							generator.$measures,
-							generator.$text-aligns,
-							generator.$aligns,
-							generator.$justifys,
-							generator.$item-aligns,
-							generator.$item-justifys,
-							generator.$self-aligns,
-							generator.$self-justifys,
+							generator.$text-align,
+							generator.$align-content,
+							generator.$justify-content,
+							generator.$align-items,
+							generator.$justify-items,
+							generator.$align-self,
+							generator.$justify-self,
 							generator.$directions,
 							generator.$displays,
 					)
 			))
 	);
-	--ff-primary     : 'DM Sans', sans-serif;
-	--ff-body        : var(--ff-primary);
-	--ff-heading     : var(--ff-primary);
+	--ff-primary    : 'DM Sans', sans-serif;
+	--ff-body       : var(--ff-primary);
+	--ff-heading    : var(--ff-primary);
 
-	--body-min-space : #{$body-min-space};
-	--body-max-space : #{$body-max-space};
-	--body-space     : #{math.clamped($body-min-space, $body-max-space, $width-sm, $width-xl)};
-	--body-max-size  : 69.375rem;
-	--body-size      : min(100% - var(--body-space) * 2, var(--body-max-size));
+	--body-space    : #{math.clamped($body-min-space, $body-max-space, $width-sm, $width-xl)};
+	--body-size     : min(100% - var(--body-space) * 2, 69.375rem);
+	--body-max-size : min(100%, 128rem);
 }
 
 :where([class*='align'], [class*='direction'], [class*='justify']) {
@@ -76,11 +74,7 @@
 		content          : '';
 		position         : absolute;
 		inset            : 0;
-		z-index : 2;
+		z-index          : 2;
 		background-image : linear-gradient(0deg, rgba(0, 0, 0, 0.7) 30%, rgba(0, 0, 0, 0));
 	}
-}
-
-.space-0 {
-	--space : 0; // temp
 }

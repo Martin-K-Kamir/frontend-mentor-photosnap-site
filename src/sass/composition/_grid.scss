@@ -11,38 +11,38 @@
 	grid-template-columns : repeat(var(--_columns), 1fr);
 
 	@media (width > $width-sm) {
-		--_columns : var(--_min);
+		--_columns : var(--_cols-at-sm);
 	}
 
 	@media (width > $width-lg) {
-		--_columns : var(--_mid);
+		--_columns : var(--_cols-at-md);
 	}
 
-	@media (width > 128em) {
-		--_columns : var(--_max);
+	@media (width > $width-xxl) {
+		--_columns : var(--_cols-at-lg);
 	}
 
 	&:has( > :last-child:nth-child(2n)) {
-		--_min    : 1;
-		--_mid    : 2;
-		--_max    : 2;
+		--_cols-at-sm    : 1;
+		--_cols-at-md    : 2;
+		--_cols-at-lg    : 2;
 	}
 
 	&:has( > :last-child:nth-child(3n)) {
-		--_min    : 1;
-		--_mid    : 3;
-		--_max    : 3;
+		--_cols-at-sm    : 1;
+		--_cols-at-md    : 3;
+		--_cols-at-lg    : 3;
 	}
 
 	&:has( > :last-child:nth-child(4n)) {
-		--_min    : 2;
-		--_mid    : 4;
-		--_max    : 4;
+		--_cols-at-sm    : 2;
+		--_cols-at-md    : 4;
+		--_cols-at-lg    : 4;
 	}
 
 	&:has( > :last-child:nth-child(8n)) {
-		--_min    : 2;
-		--_mid    : 4;
-		--_max    : 8;
+		--_cols-at-sm    : 2;
+		--_cols-at-md    : 4;
+		--_cols-at-lg    : 8;
 	}
 }

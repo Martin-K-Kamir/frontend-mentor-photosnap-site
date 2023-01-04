@@ -5,27 +5,32 @@ import Logo from "./Logo.jsx";
 export default function FooterSite() {
 
     return (<footer className="[ footer-site ] [ fg-neutral-1 bg-neutral-5 ]">
-        <div className="wrapper">
-            <Link to="/" aria-label="homepage"><Logo/></Link>
-            <nav id="navigation-footer">
-                <ul aria-label="navigation footer" role="list">
+        <div className="[ footer-site__container ] [ columns wrapper flow ] [ justify-items-center align-items-start justify-items-start//md text-center//below-md ]">
+            <div className="justify-content-center">
+                <Link to="/" aria-label="homepage">
+                    <Logo/>
+                </Link>
+            </div>
+            <nav id="navigation-footer" className="navigation-footer">
+                <ul aria-label="navigation footer" role="list" className="[ flow ] [ direction-row//md direction-column//lg ]">
                     <li><NavLink exact="true" to="/">home</NavLink></li>
                     <li><NavLink exact="true" to="/stories">stories</NavLink></li>
                     <li><NavLink exact="true" to="/features">features</NavLink></li>
                     <li><NavLink exact="true" to="/pricing">pricing</NavLink></li>
                 </ul>
             </nav>
-            <nav id="navigation-socials">
-                <ul aria-label="navigation socials" role="list">
-                    <li><Button href="https://martinkamir.com/" type="icon" icon={{name: "mkk", size: "1.7em"}} attributes={{"aria-label": "author's website"}}/></li>
-                    <li><Button href="https://github.com/Martin-K-Kamir/" type="icon" icon={{name: "github", size: "1.7em"}} attributes={{"aria-label": "github"}}/></li>
-                    <li><Button href="https://www.linkedin.com/in/martin-kam%C3%ADr-2967aa222/" type="icon" icon={{name: "linkedin", size: "1.7em"}} attributes={{"aria-label": "linkedin"}}/></li>
-                    <li><Button href="https://www.facebook.com/" type="icon" icon={{name: "facebook", size: "1.7em"}} attributes={{"aria-label": "facebook"}}/></li>
-                    <li><Button href="https://www.instagram.com//" type="icon" icon={{name: "instagram", size: "1.7em"}} attributes={{"aria-label": "instagram"}}/></li>
+            <nav id="navigation-socials" className="navigation-socials">
+                <ul aria-label="navigation socials" role="list" className="[ flow ] [ direction-row justify-content-center ]">
+                    <li><Button href="https://martinkamir.com/" type="icon" icon={{name: "mkk", size: "1.5em"}} attributes={{"aria-label": "author's website"}}/></li>
+                    <li><Button href="https://github.com/Martin-K-Kamir/" type="icon" icon={{name: "github", size: "1.35em"}} attributes={{"aria-label": "github"}}/></li>
+                    <li><Button href="https://www.linkedin.com/in/martin-kam%C3%ADr-2967aa222/" type="icon" icon={{name: "linkedin", size: "1.35em"}} attributes={{"aria-label": "linkedin"}}/></li>
+                    <li><Button href="https://www.facebook.com/" type="icon" icon={{name: "facebook", size: "1.35em"}} attributes={{"aria-label": "facebook"}}/></li>
+                    <li><Button href="https://www.instagram.com//" type="icon" icon={{name: "instagram", size: "1.35em"}} attributes={{"aria-label": "instagram"}}/></li>
                 </ul>
             </nav>
-            <Button to="/coming-soon" type="link" >Get an invite</Button>
-            <p className="fs-1 fg-neutral-3">Challenge by Frontend Mentor. Coded by Martin Kamír.<br/>Copyright 2019. All Rights Reserved</p>
+            <Button to="/coming-soon" type="link" utils="justify-content-center justify-self-end//md">Get an invite</Button>
+            <p className="[ copyright ] [ fs-1 fg-neutral-3 justify-self-end//md ]">Challenge by Frontend Mentor. Coded by Martin Kamír.<br/>Copyright 2023. All Rights
+                Reserved</p>
         </div>
     </footer>);
 };

@@ -622,12 +622,8 @@
 
 	@if $auto == true {
 		$_src : (
-				map-of.$animations,
-				map-of.$aspect-ratios,
 				map-of.$font-weights,
 				map-of.$letter-spacings,
-				map-of.$borders,
-				map-of.$easings,
 				map-of.$line-heights,
 				map-of.$measures,
 				map-of.$radius,
