@@ -6,11 +6,9 @@ export default function FooterSite() {
 
     return (<footer className="[ footer-site ] [ fg-neutral-1 bg-neutral-5 ]">
         <div className="[ footer-site__container ] [ columns wrapper flow ] [ justify-items-center align-items-start justify-items-start//md text-center//below-md ]">
-            <div className="justify-content-center">
-                <Link to="/" aria-label="homepage">
-                    <Logo/>
-                </Link>
-            </div>
+            <Link to="/" aria-label="homepage" className="justify-content-center">
+                <Logo/>
+            </Link>
             <nav id="navigation-footer" className="navigation-footer">
                 <ul aria-label="navigation footer" role="list" className="[ flow ] [ direction-row//md direction-column//lg ]">
                     <li><NavLink exact="true" to="/">home</NavLink></li>
