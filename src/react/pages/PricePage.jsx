@@ -9,7 +9,7 @@ import {useState} from "react";
 export default function PricePage() {
     const [paymentFrequency, setPaymentFrequency] = useState(0);
 
-    function handleTogglePaymentFrequency() {
+    function handleToggle() {
         setPaymentFrequency(paymentFrequency === 0 ? 1 : 0);
     }
 
@@ -20,7 +20,7 @@ export default function PricePage() {
             <section>
                 <div className="wrapper">
                     <h2 className="sr-only">Subscription plans</h2>
-                    <Toggle onClick={handleTogglePaymentFrequency} leadLabel="Monthly" rearLabel="Yearly" utils="fg-neutral-5 bg-neutral-2"/>
+                    <Toggle onClick={handleToggle} leadLabel="Monthly" rearLabel="Yearly" utils="fg-neutral-5 bg-neutral-2"/>
                     <div className="[ flow ] [ direction-row//lg ]">
                         {data.plans.map((plan, index) => <CardPlan paymentFrequencySelected={paymentFrequency} key={`key${index}`} {...plan} btn={{...plan.btn, content: "Pick plan"}}/>)}
                     </div>

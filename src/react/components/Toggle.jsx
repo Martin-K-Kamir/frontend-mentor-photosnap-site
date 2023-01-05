@@ -10,25 +10,14 @@ export default function Toggle(props) {
         props.onClick();
     }
 
-    function handleLabelClick(label) {
+    function handleLabelClick(bool) {
         // if (!props.onClick) return;
 
-        if (label === "lead") {
-            if (props.rearLabel) {
-                setToggle(false);
-                props.onClick()
-            } else {
-                setToggle(!toggle);
-                props.onClick();
-            }
-        } else if (label === "rear") {
-            if (props.leadLabel) {
-                setToggle(true);
-                props.onClick()
-            } else {
-                setToggle(!toggle);
-                props.onClick();
-            }
+        if (props.rearLabel && props.leadLabel) {
+            setToggle(bool);
+            if (!(bool === toggle)) props.onClick();
+        } else {
+            handleToggle()
         }
     }
 
@@ -47,9 +36,9 @@ export default function Toggle(props) {
     return (
         props.leadLabel || props.rearLabel ?
             <div className={props.utils ? `[ toggle-container ] [ ${props.utils} ]` : 'toggle-container'}>
-                {props.leadLabel && <p onClick={() => handleLabelClick("lead")} data-active={!toggle}>{props.leadLabel}</p>}
+                {props.leadLabel && <p onClick={() => handleLabelClick(false)} data-active={!toggle}>{props.leadLabel}</p>}
                 {renderButton()}
-                {props.rearLabel && <p onClick={() => handleLabelClick("rear")} data-active={toggle}>{props.rearLabel}</p>}
+                {props.rearLabel && <p onClick={() => handleLabelClick(true)} data-active={toggle}>{props.rearLabel}</p>}
             </div> :
             renderButton()
     );
