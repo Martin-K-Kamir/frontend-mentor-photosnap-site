@@ -18,22 +18,22 @@
 	&__container {
 		display         : grid;
 
-	@container (width <= 26rem) {
-		text-align      : center;
-		justify-content : center;
-	}
+		@container (width <= 26rem) {
+			text-align      : center;
+			justify-content : center;
+		}
 	}
 
 	&__content {
-	@container (width > 26rem) {
-		display               : grid;
-		grid-template-columns : 1fr max-content;
-	}
+		@container (width > 26rem) {
+			display               : grid;
+			grid-template-columns : 1fr max-content;
+		}
 	}
 
 	.btn {
-	@container (width > 26rem) {
-		max-inline-size : 14rem;
-	}
+		@container (width > 26rem) {
+			max-inline-size : 14rem;
+		}
 	}
 }

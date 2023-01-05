@@ -346,9 +346,9 @@ export default {
             },
         }
     ],
-    tablePlan: {
-        headerPlans: ["The features", "Basic", "Pro", "Business"],
-        headerFeatures: [
+    tableFeatures: {
+        headerCols: ["The features", "Basic", "Pro", "Business"],
+        headerRows: [
             "Unlimited Story Posting",
             "Unlimited Photo Upload",
             "Embedding Custom Content",
@@ -360,14 +360,14 @@ export default {
         ],
         plans: [
             {
-                planName: "Basic",
+                name: "Basic",
                 features: [
                     "Unlimited Story Posting",
                     "Unlimited Photo Upload",
                 ],
             },
             {
-                planName: "Pro",
+                name: "Pro",
                 features: [
                     "Unlimited Story Posting",
                     "Unlimited Photo Upload",
@@ -376,7 +376,7 @@ export default {
                 ],
             },
             {
-                planName: "Business",
+                name: "Business",
                 features: [
                     "Unlimited Story Posting",
                     "Unlimited Photo Upload",
@@ -394,8 +394,8 @@ export default {
         {
             title: "Basic",
             desc: "Includes basic usage of our platform. Recommended for new and aspiring photographers.",
-            price: [19, 190],
-            paymentFrequency : ["month", "year"],
+            prices: [19, 190],
+            frequency : ["month", "year"],
             btn: {
                 to: "/coming-soon",
             }
@@ -404,8 +404,8 @@ export default {
             highlight: true,
             title: "Pro",
             desc: "More advanced features available. Recommended for photography veterans and professionals.",
-            price: [39, 390],
-            paymentFrequency : ["month", "year"],
+            prices: [39, 390],
+            frequency : ["month", "year"],
             btn: {
                 to: "/coming-soon",
             }
@@ -413,8 +413,8 @@ export default {
         {
             title: "Business",
             desc: "Additional features available such as more detailed metrics. Recommended for business owners.",
-            price: [99, 999],
-            paymentFrequency : ["month", "year"],
+            prices: [99, 999],
+            frequency : ["month", "year"],
             btn: {
                 to: "/coming-soon",
             }

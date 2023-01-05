@@ -1,0 +1,28 @@
+
+.table-features {
+	text-align      : left;
+	max-inline-size : 45rem;
+
+	&__group {
+		padding-block-end: var(--_space);
+		border-block-end: 1px solid var(--clr-neutral-2);
+
+		@media (width <= $width-md) {
+			display               : grid;
+			grid-template-columns : 1fr 1fr 1fr;
+			grid-template-areas   :'th th th' '. . .';
+		}
+	}
+
+	&__group th {
+		@media (width <= $width-md) {
+			grid-area : th;
+		}
+	}
+
+
+	thead {
+		padding-block-end: var(--_space);
+		border-block-end: 1px solid var(--clr-neutral-5);
+	}
+}

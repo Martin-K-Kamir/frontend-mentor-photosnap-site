@@ -3,6 +3,8 @@
 @use 'variables' as *;
 
 $font-weights    : (
+		'utils' : 'both',
+		'utils-property' : 'font-weight',
 		'fw-regular' : 400,
 		'fw-medium' : 500,
 		'fw-bold' : 700,
