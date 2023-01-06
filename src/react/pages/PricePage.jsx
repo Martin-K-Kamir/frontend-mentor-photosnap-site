@@ -1,10 +1,10 @@
 import data from "../../data.js";
+import {useState} from "react";
 import Hero from "../components/Hero.jsx";
 import Cta from "../components/Cta.jsx";
 import TableFeatures from "../components/TableFeatures.jsx";
 import CardPlan from "../components/CardPlan";
 import Toggle from "../components/Toggle";
-import {useState} from "react";
 
 export default function PricePage() {
     const [paymentFrequency, setPaymentFrequency] = useState(0);
@@ -26,7 +26,8 @@ export default function PricePage() {
                             <CardPlan key={`key${index}`}
                                       {...plan}
                                       price={plan.prices[paymentFrequency]}
-                                      frequency={plan.frequency[paymentFrequency]} btn={{content: "Pick plan"}}
+                                      frequency={plan.frequency[paymentFrequency]}
+                                      btn={{content: "Pick plan"}}
                             />
                         )}
                     </div>
@@ -34,8 +35,8 @@ export default function PricePage() {
             </section>
 
             <section>
-                <div className="wrapper stack">
-                <h2 className="[ title-5 ] [ text-center hide//below-md ]">Compare</h2>
+                <div className="[ wrapper stack ] [ direction-column justify-items-center ]">
+                    <h2 className="[ title-5 ] [ text-center hide//below-md ]">Compare</h2>
                     <TableFeatures/>
                 </div>
             </section>

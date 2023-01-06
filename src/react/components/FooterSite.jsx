@@ -27,8 +27,7 @@ export default function FooterSite() {
                 </ul>
             </nav>
             <Button to="/coming-soon" type="link" utils="justify-content-center justify-self-end//md">Get an invite</Button>
-            <p className="[ copyright ] [ fs-1 fg-neutral-3 justify-self-end//md ]">Challenge by Frontend Mentor. Coded by Martin Kamír.<br/>Copyright 2023. All Rights
-                Reserved</p>
+            <p className="[ copyright ] [ fs-1 fg-neutral-3 justify-self-end//md ]">Challenge by Frontend Mentor. Coded by Martin Kamír.<br/>Copyright 2023. All Rights Reserved</p>
         </div>
     </footer>);
 };

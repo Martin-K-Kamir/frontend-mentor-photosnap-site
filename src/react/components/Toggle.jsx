@@ -5,13 +5,13 @@ export default function Toggle(props) {
     const [toggle, setToggle] = useState(false);
 
     function handleToggle() {
-        // if (!props.onClick) return;
+        if (!props.onClick) return;
         setToggle(!toggle);
         props.onClick();
     }
 
     function handleLabelClick(bool) {
-        // if (!props.onClick) return;
+        if (!props.onClick) return;
 
         if (props.rearLabel && props.leadLabel) {
             setToggle(bool);

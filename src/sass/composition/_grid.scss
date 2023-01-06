@@ -40,6 +40,12 @@
 		--_cols-at-lg    : 4;
 	}
 
+	&:has( > :last-child:nth-child(6)) {
+		--_cols-at-sm    : 2;
+		--_cols-at-md    : 3;
+		--_cols-at-lg    : 3;
+	}
+
 	&:has( > :last-child:nth-child(8n)) {
 		--_cols-at-sm    : 2;
 		--_cols-at-md    : 4;

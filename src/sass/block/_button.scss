@@ -22,6 +22,13 @@
 	background-color       : var(--_bg);
 	transition             : background-color var(--_transition-duration) var(--_transition-timing), border var(--_transition-duration) var(--_transition-timing);
 
+	@media (hover : hover) {
+		&:where(:hover, :focus-visible) {
+			--_fg : var(--clr-neutral-5, #000000);
+			--_bg : var(--clr-neutral-3, #EAEAEA);
+		}
+	}
+
 	&:where(&:has(.icon):not(:only-child)) {
 		justify-content : space-between;
 	}

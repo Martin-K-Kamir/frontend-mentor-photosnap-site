@@ -12,7 +12,9 @@ body {
 }
 
 body:has(nav[data-open='true']) {
-	overflow : hidden;
+	@media (width <= $width-md) {
+		overflow : hidden;
+	}
 }
 
 :where(a, button, input, select) {
