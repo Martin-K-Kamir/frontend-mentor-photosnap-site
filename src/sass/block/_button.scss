@@ -4,6 +4,7 @@
 	--_bg                  : var(--fg, var(--clr-neutral-5, #000000));
 	--_transition-duration : 150ms;
 	--_transition-timing   : ease-out;
+	--outline-fg           : var(--_bg);
 
 	position               : relative;
 	cursor                 : pointer;
@@ -20,12 +21,11 @@
 	border                 : none;
 	color                  : var(--_fg);
 	background-color       : var(--_bg);
-	transition             : background-color var(--_transition-duration) var(--_transition-timing), border var(--_transition-duration) var(--_transition-timing);
+	transition             : opacity var(--_transition-duration) var(--_transition-timing);
 
 	@media (hover : hover) {
 		&:where(:hover, :focus-visible) {
-			--_fg : var(--clr-neutral-5, #000000);
-			--_bg : var(--clr-neutral-3, #EAEAEA);
+			opacity : 0.7;
 		}
 	}
 
@@ -40,9 +40,10 @@
 }
 
 :is([data-type='link'], [data-type='hamburger'], [data-type='icon']).btn {
-	--_fg   : var(--fg, var(--clr-neutral-1, #000000));
-	--_bg   : transparent;
-	padding : 0;
+	--_fg        : var(--fg, var(--clr-neutral-1, #000000));
+	--_bg        : transparent;
+	--outline-fg : var(--_fg);
+	padding      : 0;
 }
 
 :is([data-type='icon'], [data-type='hamburger']).btn {
@@ -52,6 +53,28 @@
 
 [data-type='link'].btn {
 	--_icon-size : 2.25em;
+
+	&::before {
+		content          : '';
+		position         : absolute;
+		inset            : auto auto 0 0;
+		inline-size      : 100%;
+		block-size       : 0.9px; // 0.9px because fixes a bug when transition is finished border gets thicker
+		background-color : var(--_fg);
+		transform-origin : right;
+		transform        : scaleX(0);
+		transition       : transform calc(var(--_transition-duration) * 2) ease-in-out;
+	}
+
+	@media (hover : hover) {
+		&:where(:hover, :focus-visible) {
+			opacity: 1;
+		}
+		&:where(:hover, :focus-visible)::before {
+			transform-origin : left;
+			transform        : scaleX(1);
+		}
+	}
 }
 
 [data-type='hamburger'].btn {

@@ -5,7 +5,7 @@
 		margin-block : 0;
 	}
 
-	& > *:not(:where(.sr-only, [class*='hide'])) + * {
+	& > *:not(:where(.sr-only, [class*='hide'], [class*='pattern'])) + * {
 		--_space           : var(--space, #{$space});
 		margin-block-start : var(--_space);
 		--space         : initial;

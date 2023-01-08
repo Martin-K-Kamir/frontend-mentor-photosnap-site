@@ -41,7 +41,7 @@ export default function Image(props) {
     }
 
     return (
-        <picture className={props.utils ? props.utils : undefined}>
+        <picture className={props.utils ? props.utils : undefined} {...props.attributes}>
             {renderSource()}
 
             <img loading={props.lazy ? "lazy" : "eager"}

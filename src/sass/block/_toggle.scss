@@ -16,9 +16,9 @@
 }
 
 .toggle {
-	--_size            : var(--size, 0.7em);
+	--_size            : var(--size, 0.65em);
 	--_block-size      : 2.5em;
-	--_inline-size     : var(--inline-size, 4.8em);
+	--_inline-size     : var(--inline-size, 5em);
 	--_handle-size     : calc(var(--_block-size) / 1.4);
 	--_max-inline-size : max(var(--_inline-size), var(--_block-size) * 1.5);
 	--_inline-space    : calc(var(--_block-size) / 5);
@@ -34,11 +34,11 @@
 		--_fg-default : var(--toggle-fg-default, var(--bg));
 	}
 
-	&[data-toggle-colors='true'] {
+	&[aria-pressed='true'][data-toggle-colors='true'] {
 		--_bg-active : var(--toggle-bg-active, var(--_bg-default));
 		--_fg-active : var(--toggle-fg-active, var(--_fg-default));
-		--_bg        : var(--_bg-active);
-		--_fg        : var(--_fg-active);
+		--_bg        : var(--_fg-active);
+		--_fg        : var(--_bg-active);
 	}
 
 	position           : relative;

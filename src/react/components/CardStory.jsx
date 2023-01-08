@@ -1,9 +1,10 @@
+import {Link} from "react-router-dom";
 import Image from "./Image";
 import Button from "./Button";
 
 export default function CardStory(props) {
     return (
-        <article className="[ card-story ] [ stacked ] [ fg-neutral-1 bg-neutral-5 ]">
+        <Link to={props.btn.to} className="[ card-story ] [ stacked ] [ fg-neutral-1 bg-neutral-5 ]">
             <Image utils="image-darker" dir="stories" useMedia={true} {...props.image}/>
             <div className="[ card-story__content ] [ stack block ] [ align-content-end ]">
                 {props.showDatetime && <time className="fs-1" dateTime={props.datetime}>{props.datetime}</time>}
@@ -12,6 +13,6 @@ export default function CardStory(props) {
                 <span className="divide" aria-hidden="true"></span>
                 <Button to={props.btn.to} type="link">{props.btn.content}</Button>
             </div>
-        </article>
+        </Link>
     );
 }

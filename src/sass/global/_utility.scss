@@ -62,20 +62,63 @@
 	border      : 0;
 }
 
-
 .text-uppercase {
 	text-transform : uppercase;
 }
 
 .image-darker {
-	position       : relative;
-	pointer-events : none;
+	--_opacity             : var(--image-darker-opacity, 1);
+	--_transition-duration : 300ms;
+	--_transition-timing   : ease-out;
+	position               : relative;
 
 	&::before {
 		content          : '';
+		pointer-events   : none;
 		position         : absolute;
 		inset            : 0;
-		z-index          : 2;
-		background-image : linear-gradient(0deg, rgba(0, 0, 0, 0.7) 30%, rgba(0, 0, 0, 0));
+		z-index          : 1;
+		background-image : linear-gradient(0deg, rgba(0, 0, 0, 0.8) 35%, rgba(0, 0, 0, 0));
+		transition       : opacity var(--_transition-duration) var(--_transition-timing);
+		opacity          : var(--_opacity);
+	}
+
+	a:where(:hover, :focus-visible):has(&) & {
+		--_opacity : 0.75;
+	}
+}
+
+.divide {
+	--_fg            : var(--fg, var(--clr-neutral-1, #FFFFFF));
+	block-size       : 1px;
+	background-color : var(--_fg);
+	opacity          : 0.2;
+}
+
+.pattern-rectangle {
+	--_block-start  : auto;
+	--_block-end    : auto;
+	--_inline-start : auto;
+	--_inline-end   : auto;
+	--_weight       : 0.375rem;
+	position        : relative;
+	z-index         : 99;
+	pointer-events  : none;
+
+	&::after {
+		content          : '';
+		position         : absolute;
+		inset            : var(--_block-start) var(--_inline-end) var(--_block-end) var(--_inline-start);
+		block-size       : var(--_weight);
+		inline-size      : 100%;
+		background-image : linear-gradient(26.57deg, #FFC593 0%, #BC7198 43.29%, #5A77FF 83.33%);
+		pointer-events   : none;
+	}
+
+	&[data-direction='block'] {
+		&::after {
+			block-size  : 100%;
+			inline-size : var(--_weight);
+		}
 	}
 }

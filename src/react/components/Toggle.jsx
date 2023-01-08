@@ -21,11 +21,12 @@ export default function Toggle(props) {
         }
     }
 
-    function renderButton() {
+    function renderToggle() {
         return (
             <button className={!(props.leadLabel || props.rearLabel) && props.utils ? `[ toggle ] [ ${props.utils} ]` : 'toggle'}
                     onClick={handleToggle}
                     aria-pressed={toggle}
+                    data-toggle-colors='true'
                     {...props.attributes}
             >
                 <span className="toggle__handle" aria-hidden="true"></span>
@@ -37,9 +38,9 @@ export default function Toggle(props) {
         props.leadLabel || props.rearLabel ?
             <div className={props.utils ? `[ toggle-container ] [ ${props.utils} ]` : 'toggle-container'}>
                 {props.leadLabel && <p onClick={() => handleLabelClick(false)} data-active={!toggle}>{props.leadLabel}</p>}
-                {renderButton()}
+                {renderToggle()}
                 {props.rearLabel && <p onClick={() => handleLabelClick(true)} data-active={toggle}>{props.rearLabel}</p>}
             </div> :
-            renderButton()
+            renderToggle()
     );
 }

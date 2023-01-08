@@ -15,7 +15,7 @@ export default function CardPlan(props) {
                         <h3 className="title-4">{props.title}</h3>
                         <p className={`measure-3 ${props.highlight ? "fg-neutral-3" : "fg-neutral-4"}`}>{props.desc}</p>
                     </div>
-                    <div>
+                    <div className="card-plan__price">
                         <p className="title-5">{localizationCurrencyFormat(props.price)}</p>
                         {props.frequency && <p className={props.highlight ? "fg-neutral-3" : "fg-neutral-4"}>per {props.frequency}</p>}
                     </div>
