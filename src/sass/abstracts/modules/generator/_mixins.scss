@@ -489,7 +489,7 @@
 				$src  : list-converted($src, 'values');
 			}
 
-			@media (#{$break-at}-width: $breakpoint) {
+			@media (#{'width'} #{if($break-at == 'min', '>', '<=' )} $breakpoint) {
 
 				@if $base != null {
 					--#{$prefix}base : #{$base};

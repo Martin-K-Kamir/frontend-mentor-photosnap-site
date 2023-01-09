@@ -9,6 +9,7 @@ export default function CardPlan(props) {
     return (
         <div className={`[ card-plan ] [ ${props.highlight ? "fg-neutral-1 bg-neutral-5" : "fg-neutral-5 bg-neutral-2"} ]`}
              data-card-highlight={props.highlight}>
+                {props.highlight && <span className="pattern-line" aria-hidden="true"></span>}
             <div className="[ card-plan__container ] [ stack ]">
                 <div className="[ card-plan__content ] [ flow ]">
                     <div className="stack">

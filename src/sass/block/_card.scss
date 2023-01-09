@@ -21,9 +21,9 @@
 
 .card-plan {
 	container-type : inline-size;
-	padding        : $body-min-space;
 
 	&__container {
+	padding        : $body-min-space;
 		display         : grid;
 
 	@container (width <= 26rem) {
@@ -42,6 +42,16 @@
 	&__price {
 	@container (width > 26rem) {
 		text-align : right;
+	}
+	}
+
+	.pattern-line {
+		block-size  : var(--_thickness);
+		inline-size : var(--_length);
+
+	@container (width > 26rem) {
+		block-size  : var(--_length);
+		inline-size : var(--_thickness);
 	}
 	}
 
