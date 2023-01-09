@@ -14,7 +14,7 @@ export default function HomePage() {
             </div>
         </section>
 
-        <section className="[ fg-neutral-1 ]">
+        <section>
             <div className="wrapper" data-max-wrapper="true">
                 <ul className="grid" data-columns="robust" role="list">
                     {data.stories.map((card, index) => index < 4 && <li key={`key${index}`}>
