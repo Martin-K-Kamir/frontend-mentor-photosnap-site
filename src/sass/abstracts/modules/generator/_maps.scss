@@ -15,9 +15,9 @@ $text-align     : (
 		'utils-property' : 'text-align',
 		'breakpoints' : auto,
 		'break-at' : 'both',
-		'text-left' : 'left',
-		'text-center' : 'center',
 		'text-start' : 'start',
+		'text-center' : 'center',
+		'text-end' : 'end',
 ) !default;
 
 $align-content   : (
@@ -121,9 +121,9 @@ $measures        : (
 		'utils-property' : '--measure',
 		'breakpoints' : auto,
 		'break-at' : 'min',
-		'measure-1' : 11ch,
-		'measure-2' : 22ch,
-		'measure-3' : 33ch,
+		'measure-1' : 12ch,
+		'measure-2' : 15ch,
+		'measure-3' : 35ch,
 		'measure-4' : 38ch,
 		'measure-5' : 48ch,
 		'measure-6' : 72ch,
