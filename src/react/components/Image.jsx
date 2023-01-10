@@ -24,6 +24,17 @@ export default function Image(props) {
         if (mediaSizes[index]) return `(width > ${mediaSizes[index]})`;
     }
 
+    console.log(props.dimensions)
+
+    function getDimension(size, i) {
+        if(!props.dimensions) return undefined;
+        if (size === 'width') {
+            return props.dimensions[i][0]
+        } else if (size === 'height') {
+            return props.dimensions[i][1]
+        }
+    }
+
     function renderSource() {
         if (props.useMedia) {
             return deviceSizes.map((size, index) => (
@@ -31,6 +42,8 @@ export default function Image(props) {
                     key={`key${index}`}
                     media={getMedia(index)}
                     srcSet={getSrcSet(index)}
+                    width={getDimension("width", index)}
+                    height={getDimension("height", index)}
                 />
             ));
         } else {
@@ -46,8 +59,8 @@ export default function Image(props) {
 
             <img loading={props.lazy ? "lazy" : "eager"}
                  fetchpriority={props.fetchPriority ? props.fetchPriority : 'auto'}
-                 width={props.width ? props.width : undefined}
-                 height={props.height ? props.height : undefined}
+                 width={getDimension("width", 0)}
+                 height={getDimension("height", 0)}
                  aria-hidden={!props.alt}
                  alt={props.alt ? props.alt : undefined}
                  src={`./assets/images/${props.dir}/desktop/${props.name}.jpg`}

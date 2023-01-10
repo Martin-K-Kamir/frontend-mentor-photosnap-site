@@ -9,7 +9,7 @@ export default function Hero(props) {
                     <Cover {...hero} hero={true} image={{...hero.image, name: "hero"}}/>
                     :
                         <div className="wrapper" data-max-wrapper="true">
-                            <span className="[ pattern-line ] [ hide//below-md ]"
+                            <span className="[ pattern-line ] [ hide//below-md hide//xxl ]"
                                   style={{"--_length" : "40%", "--_block-start" : "50%", "--_translate-y" : "-50%"}}
                                   aria-hidden="true">
                             </span>

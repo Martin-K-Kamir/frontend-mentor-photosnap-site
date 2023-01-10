@@ -15,7 +15,7 @@ export default function PricePage() {
 
     return (
         <main>
-            <Hero data={data} page="pricing"/>
+            <Hero data={data}  page="pricing"/>
 
             <section>
                 <div className="wrapper stack">

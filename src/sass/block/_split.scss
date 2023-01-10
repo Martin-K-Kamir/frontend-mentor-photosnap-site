@@ -6,12 +6,7 @@
 
 	&__content {
 		padding         : $body-min-space;
-		block-size      : inherit;
-
-		@media (width > $width-md) {
-			max-inline-size : 37.5rem;
-			min-inline-size : 30rem;
-		}
+		max-inline-size : var(--measure, 37.5rem);
 	}
 
 	picture {
