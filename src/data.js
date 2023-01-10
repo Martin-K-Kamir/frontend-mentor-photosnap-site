@@ -328,8 +328,8 @@ export default {
             title: "Features",
             desc: "We make sure all of our features are designed to be loved by every aspiring and even professional photograpers who wanted to share their stories.",
             image: {
-                dir: "features",
-                alt: "A man holds a camera and looks at the forest",
+                dir: "home",
+                alt: "A photographer standing on a pier looks at the beautiful mountains",
                 widths: ["830", "375"],
                 deviceSizes: ["desktop", "mobile"]
             },

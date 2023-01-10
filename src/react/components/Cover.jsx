@@ -14,13 +14,34 @@ export default function Cover(props) {
     return (
         <div className="[ cover ] [ stacked ] [ fg-neutral-1 bg-neutral-5 ]" data-extrinsic-sizing='true'>
             <Image utils="image-darker" {...props.image}/>
-            <div className="[ cover__content ] [ stack wrapper ] [ align-content-center//md ]" data-max-wrapper="true">
-                {props.hero && <span className="[ pattern-line ] [ hide//md ]" data-direction="horizontal" style={{"--_length" : "30%", "--_block-start" : "0"}} aria-hidden="true"></span>}
-                {props.subtitle && <p className="[ title-1 ] [ text-uppercase ]">{props.subtitle}</p>}
-                <Title className="title-5">{props.title}</Title>
-                {props.author && props.datetime && <p className="[ fs-1 ] [ fg-neutral-2 ]">{props.datetime && <time dateTime={props.datetime}>{props.datetime}</time> } {props.author && "by " + props.author}</p>}
-                <p className={`[ ${props.hero ? "fg-neutral-3" : "fg-neutral-4"} ]`}>{props.desc}</p>
-                {props.btn && <Button type="link" {...props.btn}>{props.btn.content}</Button>}
+            <div className="[ wrapper ] [ align-content-center//md ]" data-max-wrapper="true">
+                <div className="[ cover__content ] [ stack ] [ measure-3 justify-content-center align-content-center//md ]">
+                    {props.hero && <span className="[ pattern-line ] [ hide//md ]"
+                                         data-direction="horizontal"
+                                         style={{"--_length" : "30%", "--_block-start" : "0"}}
+                                         aria-hidden="true">
+                </span>}
+
+                    {props.subtitle && <p className="[ title-1 ] [ text-uppercase ]">
+                        {props.subtitle}
+                    </p>}
+
+                    <Title className={`[ title-5 ] [ ${props.hero ? "measure-2" : "measure-1"} ]`}>
+                        {props.title}
+                    </Title>
+
+                    {props.author && props.datetime && <p className="[ fs-1 ] [ fg-neutral-2 ]">
+                        {props.datetime && <time dateTime={props.datetime}>{props.datetime}</time> } {props.author && "by " + props.author}
+                    </p>}
+
+                    <p className={`[ ${props.hero ? "fg-neutral-3" : "fg-neutral-4"} ]`}>
+                        {props.desc}
+                    </p>
+
+                    {props.btn && <Button type="link" utils="justify-self-start" {...props.btn}>
+                        {props.btn.content}
+                    </Button>}
+                </div>
             </div>
         </div>
     );
