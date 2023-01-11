@@ -8,7 +8,7 @@ module.exports = () => {
                 ['--_block-start', '--_block-end', '--_inline-start', '--_inline-end', '--_translate-x', '--_translate-y', '--_inline-size', "--_thickness", "--_length"]
             ),
             // require("postcss-combine-media-query"),
-            require("postcss-combine-duplicated-selectors"),
+            // require("postcss-combine-duplicated-selectors"),
         ],
     };
 };
