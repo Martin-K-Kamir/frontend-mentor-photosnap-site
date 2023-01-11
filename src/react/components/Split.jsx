@@ -9,10 +9,7 @@ export default function Split(props) {
             return 'h2';
         }
     }
-
     const Title = getTitle();
-
-    console.log(props.image)
 
     return (
         <div className="[ split ] [ direction-row//md ]">
@@ -20,7 +17,7 @@ export default function Split(props) {
                 {props.hero && <span className="[ pattern-line ] [ hide//md ]" data-direction="horizontal" style={{"--_length" : "30%", "--_block-start" : "0"}} aria-hidden="true"></span>}
                 <Title className="title-5">{props.title}</Title>
                 <p className={`${props.hero ? "fg-neutral-3" : "fg-neutral-4"}`}>{props.desc}</p>
-                {props.btn && <Button type="link" utils="justify-self-start" {...props.btn}>{props.btn.content}</Button>}
+                {props.btn && <Button type="link" utils="space-4 justify-self-start" {...props.btn}>{props.btn.content}</Button>}
             </div>
             <Image {...props.image}/>
         </div>

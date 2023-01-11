@@ -4,17 +4,19 @@
 	inline-size : min(100%, 45rem);
 
 	&__head {
+		--space-flow          : 0.3em;
 		padding-block-end : var(--_space);
 		border-block-end  : 1px solid var(--clr-neutral-5);
 
 		@media (width > $width-md) {
-			padding-inline        : $body-min-space;
+			padding-inline        : var(--space-4);
 			display               : grid;
 			grid-template-columns : 1fr repeat(3, 7ch);
 		}
 	}
 
 	&__group {
+		--space-flow          : 0.3em;
 		padding-block-end     : var(--_space);
 		border-block-end      : 1px solid var(--clr-neutral-2);
 		display               : grid;
@@ -22,7 +24,7 @@
 		grid-template-areas   :'th th th' '. . .';
 
 		@media (width > $width-md) {
-			padding-inline        : $body-min-space;
+			padding-inline        : var(--space-4);
 			grid-template-columns : 1fr repeat(3, 7ch);
 			grid-template-areas   : 'th . . .';
 		}

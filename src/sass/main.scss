@@ -26,3 +26,19 @@
 @import 'composition/zpattern';
 
 @import 'global/utility';
+
+.boxes {
+	margin-top : 2rem;
+
+	div {
+		height : 1rem;
+		width : var(--space);
+		background: crimson;
+	}
+}
+
+.boxes2 {
+	div	{
+		background: steelblue;
+	}
+}

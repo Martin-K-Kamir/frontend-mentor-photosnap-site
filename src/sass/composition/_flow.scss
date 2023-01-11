@@ -4,8 +4,11 @@
 
 .flow {
 	--_space : var(--space, #{$space});
-	gap      : var(--_space);
-	--space : initial;
+	gap      : var(--space-flow, var(--_space));
+
+	& > * {
+		--space : initial;
+	}
 
 	&[data-inherit-space='true'],
 	& [data-inherit-space='true'] {

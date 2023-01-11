@@ -6,7 +6,7 @@
 
 	&__container {
 		background-color : inherit;
-		padding-block    : 1rem; // temp
+		padding-block    : var(--space);
 	}
 
 	nav {
@@ -15,6 +15,16 @@
 			inset     : auto 0 0 0;
 			z-index   : -1;
 			translate : 0 -1px;
+		}
+	}
+
+	nav ul {
+		@media (width <= $width-md) {
+			padding : var(--space-4);
+		}
+
+		@media (width > $width-md) {
+			--space : var(--space-5);
 		}
 	}
 
@@ -58,6 +68,12 @@
 	nav[data-open='true']::after {
 		@media (width <= $width-md) {
 			opacity : 0.8;
+		}
+	}
+
+	nav .btn {
+		@media (width <= $width-md) {
+			inline-size : 100%;
 		}
 	}
 

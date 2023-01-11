@@ -5,8 +5,13 @@
 	}
 
 	&__content {
-		padding         : $body-min-space;
+		padding-inline  : var(--space-4);
+		padding-block   : var(--space-7);
 		max-inline-size : var(--measure, 37.5rem);
+
+		@media (width > $width-md) {
+			padding : var(--space-6);
+		}
 	}
 
 	picture {

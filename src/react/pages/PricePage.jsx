@@ -14,14 +14,14 @@ export default function PricePage() {
     }
 
     return (
-        <main>
+        <main className="[ flow ] [ space-fluid-9 ]">
             <Hero data={data}  page="pricing"/>
 
             <section>
-                <div className="wrapper stack">
+                <div className="[ wrapper flow ] [ space-5 ]">
                     <h2 className="sr-only">Subscription plans</h2>
                     <Toggle onClick={handleToggle} leadLabel="Monthly" rearLabel="Yearly" utils="fg-neutral-5 bg-neutral-2 justify-self-center"/>
-                    <div className="[ flow ] [ direction-row//lg ]">
+                    <div className="[ flow ] [ space-4 direction-row//lg align-items-center ]">
                         {data.plans.map((plan, index) =>
                             <CardPlan key={`key${index}`}
                                       {...plan}
@@ -35,14 +35,12 @@ export default function PricePage() {
             </section>
 
             <section>
-                <div className="[ wrapper stack ] [ direction-column justify-items-center ]">
+                <div className="[ wrapper flow ] [ direction-column justify-items-center ]">
                     <h2 className="[ title-5 ] [ text-center hide//below-md ]">Compare</h2>
                     <TableFeatures/>
                 </div>
             </section>
-            <section>
                 <Cta/>
-            </section>
         </main>
     );
 }

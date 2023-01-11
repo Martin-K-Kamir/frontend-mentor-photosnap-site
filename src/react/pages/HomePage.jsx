@@ -24,9 +24,9 @@ export default function HomePage() {
             </div>
         </section>
 
-        <section>
+        <section className="space-fluid-10">
             <div className="wrapper">
-                <ul className="grid flow" data-columns="robust" role="list">
+                <ul className="[ grid flow ] [ space-fluid-8 ]" data-columns="robust" role="list">
                     {data.features.map((card, index) => index < 3 && <li key={`key${index}`}>
                         <CardFeature {...card}/>
                     </li>)}

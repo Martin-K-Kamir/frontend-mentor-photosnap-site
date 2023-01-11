@@ -20,6 +20,16 @@
 							),
 					),
 			),
+			'space-types' : (
+					'base' : 0.5rem,
+					'ratio' : 'perfect-fourth',
+					'length' : 8,
+			),
+			'fluid-space-types' : (
+					'base' : ('min': 0.5rem, 'max': 0.75rem),
+					'ratio' : ('min': 'minor-third', 'max': 'perfect-fourth'),
+					'length' : 10,
+			),
 			'utilities' : (
 					'src' : (
 							generator.$font-weights,
@@ -40,8 +50,7 @@
 	--ff-primary    : 'DM Sans', sans-serif;
 	--ff-body       : var(--ff-primary);
 	--ff-heading    : var(--ff-primary);
-
-	--body-space    : #{math.clamped($body-min-space, $body-max-space, $width-sm, $width-xl)};
+	--body-space    : clamp(var(--space-4), 5.68vw + -0.13rem, var(--space-8));
 	--body-size     : min(100% - var(--body-space) * 2, 69.375rem);
 	--body-max-size : min(100%, 128rem);
 }
@@ -88,16 +97,25 @@
 	}
 }
 
+.image-darker\/\/below-md {
+	@extend .image-darker;
+	@media (width <= $width-md) {
+		--_opacity : 0;
+	}
+}
+
 .divide {
-	--_fg            : var(--fg, var(--clr-neutral-1, #FFFFFF));
+	--_fg            : var(--fg, var(--clr-neutral-5, #000000));
 	block-size       : 1px;
+	inline-size      : 100%;
 	background-color : var(--_fg);
 	opacity          : 0.2;
 }
 
-*:has( > .pattern-line) {
+*:has( > [class*='pattern']) {
 	position : relative;
 }
+
 .pattern-line {
 	--_block-start   : 0;
 	--_block-end     : auto;

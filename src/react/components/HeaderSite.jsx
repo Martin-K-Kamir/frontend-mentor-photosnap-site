@@ -17,12 +17,12 @@ export default function HeaderSite() {
     }
 
     return (<header className="[ header-site ] [ fg-neutral-5 bg-neutral-1 ]">
-        <div className="[ header-site__container ] [ wrapper ] [ direction-row justify-content-between align-items-center ]">
+        <div className="[ header-site__container ] [ wrapper ] [ space-2 direction-row justify-content-between align-items-center ]">
             <Link to="/" aria-label="homepage" onClick={() => setNavOpen(false)}><Logo/></Link>
             <Button onClick={handleToggleNav} type="hamburger" icon={{name: navOpen ? "close" : "hamburger"}}
                     attributes={{"aria-controls": "navigation-primary", "aria-expanded": navOpen, "aria-label": "menu"}}/>
             <nav id="navigation-primary" data-open={navOpen} onClick={e => handleOutsideClick(e)}>
-                <ul aria-label="navigation primary" className="[ flow ] [ bg-neutral-1 justify-items-center align-items-center//md direction-row//md ]" role="list">
+                <ul aria-label="navigation primary" className="[ flow ] [ bg-neutral-1 text-center align-items-center//md direction-row//md ]" role="list">
                     <li className="[ title-2 ] [ text-uppercase ]"><NavLink exact="true" to="/stories" onClick={handleToggleNav}>stories</NavLink></li>
                     <li className="[ title-2 ] [ text-uppercase ]"><NavLink exact="true" to="/features" onClick={handleToggleNav}>features</NavLink></li >
                     <li className="[ title-2 ] [ text-uppercase ]"><NavLink exact="true" to="/pricing" onClick={handleToggleNav}>pricing</NavLink></li>

@@ -3,7 +3,8 @@ import Icon from "./Icon.jsx";
 
 export default function TableFeatures() {
     return (
-        <table className="[ table-features ] [ stack ]" data-stack-first="true" data-inherit-space='true'>
+        <table className="[ table-features ] [ stack ]" data-stack-first="true"
+        >
             <thead>
                 <tr className="[ table-features__head ] [ flow ]">{data.tableFeatures.headerCols.map((headerCol, index) => <th key={`key${index}`} scope="col" className={`[ title-1 ] [ text-uppercase ${index !== 0 ? "hide//below-md justify-self-center//md " : ""} ]`}>{headerCol}</th>)}</tr>
             </thead>

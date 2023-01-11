@@ -4,8 +4,8 @@ import Logo from "./Logo.jsx";
 
 export default function FooterSite() {
 
-    return (<footer className="[ footer-site ] [ fg-neutral-1 bg-neutral-5 ]">
-        <div className="[ footer-site__container ] [ columns wrapper flow ] [ justify-items-center align-items-start justify-items-start//md text-center//below-md ]">
+    return (<footer className="[ footer-site ] [ space-7 fg-neutral-1 bg-neutral-5 ]">
+        <div className="[ footer-site__container ] [ columns wrapper flow ] [ space-4 justify-items-center align-items-start justify-items-start//md text-center//below-md ]">
             <Link to="/" aria-label="homepage" className="justify-content-center">
                 <Logo/>
             </Link>
@@ -18,7 +18,7 @@ export default function FooterSite() {
                 </ul>
             </nav>
             <nav id="navigation-socials" className="navigation-socials">
-                <ul aria-label="navigation socials" role="list" className="[ flow ] [ direction-row justify-content-center ]">
+                <ul aria-label="navigation socials" role="list" className="direction-row justify-content-center">
                     <li><Button href="https://martinkamir.com/" type="icon" icon={{name: "mkk", size: "1.5em"}} attributes={{"aria-label": "author's website"}}/></li>
                     <li><Button href="https://github.com/Martin-K-Kamir/" type="icon" icon={{name: "github", size: "1.35em"}} attributes={{"aria-label": "github"}}/></li>
                     <li><Button href="https://www.linkedin.com/in/martin-kam%C3%ADr-2967aa222/" type="icon" icon={{name: "linkedin", size: "1.35em"}} attributes={{"aria-label": "linkedin"}}/></li>

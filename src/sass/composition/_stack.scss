@@ -6,7 +6,7 @@
 	}
 
 	& > *:not(:where(.sr-only, [class*='hide'], [class*='pattern'])) + * {
-		--_space           : var(--space, #{$space});
+		--_space           : var(--space, var(--space-stack, #{$space}));
 		margin-block-start : var(--_space);
 		--space         : initial;
 	}
@@ -14,7 +14,7 @@
 
 [data-stack-first='true'].stack {
 	& > *:first-child {
-		--_space           : var(--space, #{$space});
+		--_space           : var(--space, var(--space-stack, #{$space}));
 		margin-block-start : var(--_space);
 		--space         : initial;
 	}

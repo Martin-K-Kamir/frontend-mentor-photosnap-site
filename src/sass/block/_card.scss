@@ -5,12 +5,12 @@
 
 	@media (hover : hover) {
 		&:where(:hover, :focus-visible) picture {
-			scale   : 1.125;
+			scale : 1.125;
 		}
 	}
 
 	&__content {
-		padding : $body-min-space;
+		padding : var(--space-4);
 	}
 
 	picture {
@@ -22,9 +22,19 @@
 .card-plan {
 	container-type : inline-size;
 
+	&[data-card-highlight='true'] {
+		.card-plan__container {
+			@media (width > $width-md) {
+				@container (width <= 26rem) {
+					padding-block : var(--space-8);
+				}
+			}
+		}
+	}
+
 	&__container {
-		padding        : $body-min-space;
-		display         : grid;
+		padding-inline  : var(--space-4);
+		padding-block   : var(--space-6);
 
 		@container (width <= 26rem) {
 			text-align      : center;
@@ -61,3 +71,4 @@
 		}
 	}
 }
+
