@@ -271,6 +271,7 @@ export default {
                 alt: "editing photos",
                 widths: ["830", "375"],
                 deviceSizes: ["desktop", "mobile"],
+                dimensions: [[1205, 650]],
             },
         },
         {
@@ -286,6 +287,7 @@ export default {
                 alt: "photographer holding camera",
                 widths: ["830", "375"],
                 deviceSizes: ["desktop", "mobile"],
+                dimensions: [[1205, 650]],
             },
         },
     ],
@@ -302,7 +304,8 @@ export default {
                 dir: "home",
                 alt: "A photographer standing on a pier looks at the beautiful mountains",
                 widths: ["830", "375"],
-                deviceSizes: ["desktop", "mobile"]
+                deviceSizes: ["desktop", "mobile"],
+                dimensions: [[1205, 650]],
             },
         },
         {
@@ -320,7 +323,8 @@ export default {
             image: {
                 dir: "stories",
                 widths: ["1440", "375"],
-                deviceSizes: ["desktop", "mobile"]
+                deviceSizes: ["desktop", "mobile"],
+                dimensions: [[2048, 650]],
             },
         },
         {
@@ -332,7 +336,7 @@ export default {
                 alt: "A man holds a camera and looks at the forest",
                 widths: ["830", "375"],
                 deviceSizes: ["desktop", "mobile"],
-                dimensions: [[1127, 490]],
+                dimensions: [[1205, 490]],
             },
         },
         {
@@ -344,9 +348,25 @@ export default {
                 alt: "a photographer takes a photo at sunset",
                 widths: ["830", "375"],
                 deviceSizes: ["desktop", "mobile"],
-                dimensions: [[1127, 490]],
+                dimensions: [[1205, 490]],
             },
-        }
+        },
+        {
+            page: 'comingSoon',
+            title: "Coming Soon",
+            desc: "The page you are looking for is not available yet. But we’re working hard to make it ready as soon as possible.",
+            btn: {
+                content: "Back to home",
+                to: "/",
+            },
+            image: {
+                dir: "home",
+                alt: "A photographer standing on a pier looks at the beautiful mountains",
+                widths: ["830", "375"],
+                deviceSizes: ["desktop", "mobile"],
+                dimensions: [[1205, 650]],
+            },
+        },
     ],
     tableFeatures: {
         headerCols: ["The features", "Basic", "Pro", "Business"],

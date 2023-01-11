@@ -21,7 +21,7 @@ export default function CardPlan(props) {
                         {props.frequency && <p className={props.highlight ? "fg-neutral-3" : "fg-neutral-4"}>per {props.frequency}</p>}
                     </div>
                 </div>
-                <Button to={props.btn.to} utils="space-4" >{props.btn.content}</Button>
+                <Button to={props.btn.to} utils="space-4">{props.btn.content}</Button>
             </div>
         </div>
     );

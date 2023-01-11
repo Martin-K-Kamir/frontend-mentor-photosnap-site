@@ -24,8 +24,6 @@ export default function Image(props) {
         if (mediaSizes[index]) return `(width > ${mediaSizes[index]})`;
     }
 
-    console.log(props.dimensions)
-
     function getDimension(size, i) {
         if(!props.dimensions) return undefined;
         if (size === 'width') {

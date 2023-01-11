@@ -27,7 +27,7 @@ export default function PricePage() {
                                       {...plan}
                                       price={plan.prices[paymentFrequency]}
                                       frequency={plan.frequency[paymentFrequency]}
-                                      btn={{content: "Pick plan"}}
+                                      btn={{...plan.btn, content: "Pick plan",}}
                             />
                         )}
                     </div>

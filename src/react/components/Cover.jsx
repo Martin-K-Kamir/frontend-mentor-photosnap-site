@@ -20,7 +20,7 @@ export default function Cover(props) {
                     <div className="[ cover__content ] [ stack ] [ measure-4 ]">
                         {props.hero && <span className="[ pattern-line ] [ hide//md ]"
                                              data-direction="horizontal"
-                                             style={{"--_length": "30%", "--_block-start": "0"}}
+                                             style={{"--_length": "7rem", "--_block-start": "0"}}
                                              aria-hidden="true">
                         </span>}
 
