@@ -18,7 +18,7 @@ Like my previous 2 projects, I used the same stack and I can say in every projec
 
 ### Links
 
-- Live Site URL - [Link](https://dine-martinkamir.netlify.app/)
+- Live Site URL - [Link](https://photosnap-martinkamir.netlify.app/)
 - My website - [Martin Kamír](https://martinkamir.com/)
 - Frontend Mentor - [@Martin-K-Kamir](https://www.frontendmentor.io/profile/Martin-K-Kamir)
 - Frontend Mentor Solution - [Solution link](https://www.frontendmentor.io/solutions/arch-studio-site-created-with-react-and-scss-bsV8ooK0-f)
