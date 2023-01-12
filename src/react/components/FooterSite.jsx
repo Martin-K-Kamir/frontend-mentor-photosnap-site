@@ -17,8 +17,8 @@ export default function FooterSite() {
                     <li className="[ title-1 ] [ text-uppercase ]"><NavLink exact="true" to="/pricing">pricing</NavLink></li>
                 </ul>
             </nav>
-            <nav id="navigation-socials" className="navigation-socials">
-                <ul aria-label="navigation socials" role="list" className="direction-row justify-content-center">
+            <nav id="navigation-socials" aria-label="navigation socials" className="navigation-socials">
+                <ul role="list" className="direction-row justify-content-center">
                     <li><Button href="https://martinkamir.com/" type="icon" icon={{name: "mkk", size: "1.5em"}} attributes={{"aria-label": "author's website"}}/></li>
                     <li><Button href="https://github.com/Martin-K-Kamir/" type="icon" icon={{name: "github", size: "1.35em"}} attributes={{"aria-label": "github"}}/></li>
                     <li><Button href="https://www.linkedin.com/in/martin-kam%C3%ADr-2967aa222/" type="icon" icon={{name: "linkedin", size: "1.35em"}} attributes={{"aria-label": "linkedin"}}/></li>
