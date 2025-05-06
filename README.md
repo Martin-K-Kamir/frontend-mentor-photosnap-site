@@ -1,4 +1,4 @@
-# Frontend Mentor - Dine site
+# Frontend Mentor - Dine site 
 
 ![preview of the site](preview.jpg)
 
